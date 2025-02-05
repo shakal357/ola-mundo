@@ -3,14 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meu primeiro site em repositorio </title>
+    <title> minha pagina de login e senha </title>
+    <style> 
+        /*reset basico*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*estilização do body*/
+        body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: linear-gradient(135deg, #74abe2, #5563de);
+        }
+        /*container do formulario*/
+        .login-container{
+            width: 90%;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+        /*cabeçalho do formulario*/
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+        /*estilização dos inputs*/
+        .login-container input[type="text"],
+        .login-container input[type="password"]{
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        /*estilização dos inputs quando focados*/
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus{
+            border-color: #5563de;
+            outline: none;
+        }
+        /*botão de login*/
+        .login-container button{
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #5563de;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .login-container button:hover{
+            background-color: #4353b3;
+        }
+        /*link para cadastro ou recuperação de senha*/
+        .login-container .link a{
+            color: #5563de;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin: 0 0.5rem;
+            transform: color 0.3s;
+        }
+        .login-container .link a:hover{
+            color: #4353b3;
+        }
+        
+
+    </style>
 </head>
 <body>
-    <h1>Olá, Mundo! </h1>
-    <hr>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, nostrum unde odit nisi rem adipisci saepe sed, sapiente ex eligendi excepturi assumenda, aut quod expedita. Ducimus, nemo! Laborum, veritatis quis.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis inventore, est fugiat quis optio expedita sapiente? Quidem, temporibus provident officiis non molestiae vero facilis eos, et qui totam obcaecati!</p>
-    <p>eu tomei a iniciativa de alterar no meu github para testar e aprimorar meus conhecimentos! </p>
-    <p>conhecimento aprimorado com sucesso!!!! </p>
+    <div class="login-container">
+            <h2> Login </h2>
+            <form action="/login" method="post">
+                <input type="text" name="Usuário" placeholder="Usuário ou Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <button type="submit"> Entrar </button>
+            </form>
+            <div class="link">
+                <a href="#"> Esqueceu a senha? </a> |
+                <a href="#"> Cadastre-se </a>
+            </div>
+    </div>
+    
 </body>
 </html>
